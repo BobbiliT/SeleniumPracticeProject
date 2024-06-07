@@ -5,13 +5,14 @@ import java.time.Duration;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ClickOpertaionUsingJavascript {
 public static void main(String[] args) {
-	System.setProperty("webdriver.chrome.driver", ".//Drivers//chromedriver.exe");
-	WebDriver driver = new ChromeDriver();
+	System.setProperty("webdriver.gecko.driver", ".//Drivers//geckodriver.exe");
+	WebDriver driver = new FirefoxDriver();
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	driver.manage().window().maximize();
 	driver.get("https://www.facebook.com");
