@@ -22,7 +22,7 @@ public static void main(String[] args) {
 	wait.until(ExpectedConditions.jsReturnsValue("return document.getElementById('pass').value='bobbili';"));
 	js.executeScript("return document.getElementById('pass').value='bobbili';");
 	wait.until(ExpectedConditions.jsReturnsValue("return document.getElementsByName('login')[0].click;"));
-	js.executeScript("return document.getElementsByName('login')[0].click;");
-    driver.close();
+	js.executeScript("return document.getElementsByName('login')[0].click()");
+    //driver.close();
 }
 }
