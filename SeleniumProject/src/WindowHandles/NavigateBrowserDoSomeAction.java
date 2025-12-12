@@ -10,8 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class NavigateBrowserDoSomeAction {
 public static void main(String[] args) throws Exception {
-	System.setProperty("webdriver.gecko.driver", ".//Drivers//geckodriver.exe");
-	WebDriver driver = new FirefoxDriver();
+	System.setProperty("WebDriver.chrome.driver", ".//Drivers//chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
 	String parentwindow=driver.getWindowHandle();

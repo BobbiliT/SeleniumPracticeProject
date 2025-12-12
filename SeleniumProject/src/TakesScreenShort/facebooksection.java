@@ -13,8 +13,8 @@ import com.google.common.io.Files;
 
 public class facebooksection {
 public static void main(String[] args) throws Exception {
-	System.setProperty("webdriver.gecko.driver", ".//Drivers//geckodriver.exe");
-	WebDriver driver = new FirefoxDriver();
+	System.setProperty("webdriver.chrome.driver", ".//Drivers//chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
 	driver.get("https://www.facebook.com");
 	WebElement el=driver.findElement(By.className("_9vtf"));
 	String tagname=el.getTagName();

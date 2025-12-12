@@ -4,14 +4,17 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.FluentWait;
 
 public class BrokenLinkForFlipkart {
 	public static void main(String[] args) throws Exception {
@@ -19,7 +22,7 @@ public class BrokenLinkForFlipkart {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.get("https://www.google.com/");
+		driver.get("https://www.flipkart.com/");
 		//1.get all the links and images 
 		List<WebElement> linklists=driver.findElements(By.tagName("a"));
 		linklists.addAll(driver.findElements(By.tagName("img")));

@@ -15,7 +15,7 @@ public class optionsDuplicateOrNot {
 	public static void main(String[] args) {
 		System.setProperty("webdriver.gecko.driver", ".//Drivers//geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
-		driver.get("file:///C:/Users/HP/Documents/dropdown.html");
+		driver.get("file:///C:/Users/HP/OneDrive/Documents/dropdown.html");
 		WebElement listbox = driver.findElement(By.id("mtr"));
 		Select s = new Select(listbox);
 		System.out.println("number of elements in the list box.");
